@@ -60,14 +60,13 @@ int main() {
 
 	// ----------- TEST 2: choice1 = 2 = Get two more actions --------------
 	printf("TEST 2: choice1 = 2 = +2 actions\n");
-	choice1 = 2;
+
 	newActions = 2;
 	printf("action count = %d, expected = %d\n", testG.numActions[thisPlayer], G.numActions[thisPlayer] + newActions);
 	assert(testG.numActions[thisPlayer] == G.numActions[thisPlayer] + newActions);
 
 	// ----------- TEST 3: choice1 = 3 = Discard 1 card --------------
-	printf("TEST 2: choice1 = 3 = -1 card\n");
-	choice1 = 3;
+	printf("TEST 3: choice1 = 3 = -1 card\n");
 
 	// tests for the appropriate number of remaining cards
 	discarded = 1;

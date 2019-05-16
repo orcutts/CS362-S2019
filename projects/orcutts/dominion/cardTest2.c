@@ -58,7 +58,6 @@ int main() {
 
 	// ----------- TEST 2: choice1 = 2 = Hand Count after Adding +3 draws and discarding 1 --------------
 	printf("TEST 2: choice1 = 2 = +3 cards -1 discard card\n");
-	choice1 = 2;
 
 	// tests for the appropriate number of remaining cards
 	discarded = 1;
