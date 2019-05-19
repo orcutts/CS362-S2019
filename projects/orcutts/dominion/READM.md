@@ -1,2 +1,4 @@
-run make all #To compile the dominion code
-run ./playdom 30 # to run playdom code
+iNAME: Shara Orcutt
+ONID: orcutts
+LOG:
+fixed verion for orcutts-assignment-3 in support of assignment-4

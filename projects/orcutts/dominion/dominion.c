@@ -670,8 +670,8 @@ void cardIsAdventurer(int drawntreasure, struct gameState *state, int currentPla
 	}
 }
 void cardIsCouncilRoom(int i, int currentPlayer, struct gameState *state, int handPos) {
-	//+3 Cards
-	for (i = 0; i < 3; i++){
+	//+4 Cards, error was + 3 cards SLO-ERROR
+	for (i = 0; i < 4; i++){
 		drawCard(currentPlayer, state);
 	}
 
@@ -691,7 +691,7 @@ void cardIsCouncilRoom(int i, int currentPlayer, struct gameState *state, int ha
 
 void cardIsSmithy(int i, int currentPlayer, struct gameState *state, int handPos) {
 	//+4 Cards
-	for (i = 0; i < 4; i++){
+	for (i = 0; i < 3; i++){
 		drawCard(currentPlayer, state);
 	}
 
