@@ -69,10 +69,27 @@ unittestresults: cardtest1 cardtest2 cardtest3 cardtest4 unittest1 unittest2 uni
 	gcov dominion.c >> unittestresult.out	
 # END OF ASSIGNMENT 3 ADDITIONS -- 
 
+# --- Start Random test -- assignment4
+randomtestcard1: randomtestcard1.c dominion.c rngs.c
+	gcc -o randomtestcard1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)	
+
+randomtestcard2: randomtestcard2.c dominion.c rngs.c
+	gcc -o randomtestcard2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)	
+
+randomtestadventurer: randomtestadventurer.c dominion.c rngs.c
+	gcc -o randomtestadventurer -g randomtestadventurer.c dominion.o rngs.o $(CFLAGS)	
+
+randomtestresults: randomtestcard1 randomtestcard2 randomtestadventurer
+	./randomtestcard1 >> randomtestresult.out	
+	./randomtestcard2 >> randomtestresult.out	
+	./randomtestadventurer >> randomtestresult.out	
+	gcov dominion.c >> randomtestresult.out	
+#---- End Random test
+
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
 
-all: playdom unittestresults player
+all: playdom unittestresults randomtestresults player
 
 clean:
 	rm -f *.o #playdom.exe player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard.exe
