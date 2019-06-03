@@ -1,2 +1,4 @@
-run make all #To compile the dominion code
-run ./playdom 30 # to run playdom code
+NAME: Shara Orcutt
+ONID: orcutts
+LOG:
+This is my branch for orcutts-assignment-5
